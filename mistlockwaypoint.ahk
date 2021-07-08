@@ -22,16 +22,21 @@
 
 
 F6::
-BlockInput, MouseMove
-Click
-Sleep, 150
-SendInput +{WheelDown}
-Sleep, 500
-Send, {Esc}
-Click
-BlockInput, MouseMoveOff
-return
+IfWinActive, Guild Wars 2
+    {
+        BlockInput, MouseMove
+        Click
+        Sleep, 150
+        SendInput +{WheelDown}
+        Sleep, 500
+        Send, {Esc}
+        Click
+        BlockInput, MouseMoveOff
+    }
+Else
+        Send {F6}
+Return
 
 +F6::
-ExitApp
+        ExitApp
 return
