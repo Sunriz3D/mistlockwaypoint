@@ -19,15 +19,19 @@
 #NoEnv  
 #Warn  
 #Persistent 
-CoordMode, Mouse, Screen 
 
 
 F6::
-
+BlockInput, MouseMove
 Click
 Sleep, 150
 SendInput +{WheelDown}
 Sleep, 500
 Send, {Esc}
 Click
+BlockInput, MouseMoveOff
+return
+
++F6::
+ExitApp
 return
